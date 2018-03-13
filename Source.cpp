@@ -20,8 +20,7 @@ void GetActiveComServerObjects(HWND hList)
 			{
 				TCHAR szKeyPath[1024];
 				lstrcpy(szKeyPath, szKeyName);
-				lstrcat(szKeyPath, TEXT("\\"));
-				lstrcat(szKeyPath, TEXT("CLSID"));
+				lstrcat(szKeyPath, TEXT("\\CLSID"));
 				HKEY hKey;
 				if (RegOpenKeyEx(HKEY_CLASSES_ROOT, szKeyPath, 0, KEY_READ, &hKey) == ERROR_SUCCESS)
 				{
